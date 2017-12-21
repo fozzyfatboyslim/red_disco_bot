@@ -1,7 +1,7 @@
-import discord
-from discord.ext import commands
 import json
 import urllib.request
+import discord
+from discord.ext import commands
 
 
 
@@ -12,7 +12,6 @@ class uthgard:
 
     @commands.command()
     async def uthgard(self, switch, *name):
-
         name = " ".join(name)
         url = "https://www2.uthgard.net/herald/api/{0}/{1}".format(switch, name)
         uthUrl = urllib.request.urlopen(url)
@@ -21,7 +20,6 @@ class uthgard:
         uthUrl.close()
 
         json_data = json.loads(urlstring)
-
         guild = json_data['Guild']
         race = json_data['Race']
         prof = json_data['Class']
