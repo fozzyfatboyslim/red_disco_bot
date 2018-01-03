@@ -13,6 +13,7 @@ class uthgard:
     @commands.command()
     async def uthgard(self, switch, *name):
         name = " ".join(name)
+        switch = "player"
         url = "https://www2.uthgard.net/herald/api/{0}/{1}".format(switch, name)
         uthUrl = urllib.request.urlopen(url)
         mybytes = uthUrl.read()

@@ -12,7 +12,7 @@ class daoc:
     @commands.command()
     async def daoc(self, switch, *name):
         name = " ".join(name)
-        url = "http://api.camelotherald.com/character/search?name={}&cluster=Yawain".format(name)
+        url = "http://api.camelotherald.com/character/search?name={}&cluster=Ywain".format(name)
         liveUrl = urllib.request.urlopen(url)
         mybytes = liveUrl.read()
         urlstring = mybytes.decode("utf8")
